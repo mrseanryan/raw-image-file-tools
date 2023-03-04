@@ -66,7 +66,7 @@ def is_selected(filename):
 def is_extension_ok(filename):
     extensions = ['jpg', 'jpeg', 'heic']
     for ext in extensions:
-        if filename.endswith(ext) or filename.endswith(ext.lower()):
+        if filename.lower().endswith(ext):
             return True
     return False
 
