@@ -55,12 +55,38 @@ def move_file(filename, dir_path):
         move_file_do(source_file_path, os.path.join(dir_path, "not-selected"))
 
 
-def move_files(dir_path):
-    filenames = os.listdir(dir_path)
+def is_selected(filename):
+    ok_tags = ['ok', 'good', 'edit', 'liked']
+    for ok in ok_tags:
+        if ok in filename:
+            return True
+    return False
 
-    # files_txt = [i for i in files if i.endswith('.txt')]
-    filenames = list(filter(lambda f: (f.endswith(".JPG") or f.endswith(
-        ".jpg") or f.endswith(".jpeg")) and not has_multiple_dots(f), filenames))
+
+def is_extension_ok(filename):
+    extensions = ['jpg', 'jpeg', 'heic']
+    for ext in extensions:
+        if filename.endswith(ext) or filename.endswith(ext.lower()):
+            return True
+    return False
+
+
+def filter_to_selected(filenames, include_filenames_multiple_dots):
+    return list(filter(lambda f:
+                       is_extension_ok(f)
+                       and (not is_selected(f))
+                       and (include_filenames_multiple_dots or not has_multiple_dots(f)),
+                       filenames))
+
+
+def move_files(dir_path):
+    filenames_all = os.listdir(dir_path)
+
+    filenames = filter_to_selected(filenames_all, False)
+
+    # handle iphone folder
+    if len(filenames) == 0:
+        filenames = filter_to_selected(filenames_all, True)
 
     for filename in filenames:
         move_file(filename, dir_path)
