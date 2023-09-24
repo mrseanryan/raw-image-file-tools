@@ -1,6 +1,6 @@
 # raw-image-file-tools README
 
-Simple tools for moving and copying selected RAW image files and their associated JPG
+Simple tools for moving and copying selected RAW image files and their associated JPG. Also watermarks and resizes.
 
 ## Dependencies
 
@@ -42,6 +42,12 @@ The following RAW file formats are supported:
 - RAW (?)
 - ARW (Sony)
 - RW2 (Panasonic)
+
+## Non-RAW files supported
+
+- JPEG (*.jpg)
+- PNG (*.png)
+- iPhone (*.HEIC)
 
 ### Usage - process and examples
 
