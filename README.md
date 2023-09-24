@@ -14,6 +14,11 @@ Simple tools for moving and copying selected RAW image files and their associate
 - install [Image Magick](https://imagemagick.org/script/download.php)
 - ensure `magick` is available via the PATH environment variable
 
+To use the BAT scripts, you need to create an environment variable `PATH_TO_RAW_IMAGE_FILE_TOOLS` that points to the local copy of this repository.
+
+Then, you can copy the BAT scripts to a convenient location, for example `c:\`.
+
+
 ## Usage
 
 | Script                         | To see usage                         | To use                                                                                                                                | Description                                                                                                                                        |
@@ -63,12 +68,6 @@ Example:
 ```
 python copy-non-selected-images.py C:\myImages\pics1
 ```
-
-### Usage - BAT scripts
-
-To use the BAT scripts, you need to create an environment variable `PATH_TO_RAW_IMAGE_FILE_TOOLS` that points to the local copy of this repository.
-
-Then, you can copy the BAT scripts to a convenient location, for example `c:\`.
 
 #### Benefits
 
