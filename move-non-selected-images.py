@@ -91,7 +91,7 @@ def move_files(dir_path):
     for filename in filenames:
         move_file(filename, dir_path)
         # Sony, RAW, Panasonic
-        raw_file_extensions = ['.ARW', '.RAW', '.RW2', '.CRW', '.NEF']
+        raw_file_extensions = ['.ARW', '.CRW', '.DNG', '.NEF', '.RAW', '.RW2']
         for raw_ext in raw_file_extensions:
             raw_file_path = Path(filename).stem + raw_ext
             move_file(raw_file_path, dir_path)
