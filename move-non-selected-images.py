@@ -83,7 +83,7 @@ def is_extension_ok(filename):
 def filter_to_not_selected(filenames, include_filenames_multiple_dots=False):
     return list(filter(lambda f:
                        is_extension_ok(f)
-                       and (not is_selected(f))
+                       and (not is_selected(f)) and (not is_almost(f))
                        and (include_filenames_multiple_dots or not has_multiple_dots(f)),
                        filenames))
 
