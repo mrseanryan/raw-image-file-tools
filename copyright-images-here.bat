@@ -11,7 +11,7 @@ PAUSE
 
 dir
 
-for %%i in (*.png) do magick convert "%%i" -gravity SouthEast -pointsize 14 -fill White -annotate +10+10 "%CR_NAME%" "%%i"
-for %%i in (*.jpg) do magick convert "%%i" -gravity SouthEast -pointsize 14 -fill White -annotate +10+10 "%CR_NAME%" "%%i"
+for %%i in (*.png) do magick "%%i" -gravity SouthEast -pointsize 14 -fill White -annotate +10+10 "%CR_NAME%" "%%i"
+for %%i in (*.jpg) do magick "%%i" -gravity SouthEast -pointsize 14 -fill White -annotate +10+10 "%CR_NAME%" "%%i"
 
 dir
