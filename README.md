@@ -81,6 +81,10 @@ python copy-non-selected-images.py C:\myImages\pics1
 - When a RAW file is processed, any associated JPG file will also be moved or copied.
 - Quickly resize and watermark images.
 
+## List files on Dropbox
+
+- see [Dropbox helper CLI](./dropbox_helper/README.md)
+
 ## License
 
 - MIT - copyright Sean Ryan 2022
