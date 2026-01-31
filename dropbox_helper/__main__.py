@@ -11,7 +11,6 @@ def main():
     command = sys.argv[1]
     path = sys.argv[2]
     recursive = "--recursive" in sys.argv
-    dry_run = "--dry-run" in sys.argv
 
     if command == "list":
         list_files(path, recursive=recursive)
